@@ -16,7 +16,8 @@ namespace Ticketing
         const decimal mdecBalcony = 35.5m;
         const decimal mdecGeneral = 28.75m;
         const decimal mdecBox = 62.0m;
-        const decimal mdecDiscount = 5.0m; 
+        const decimal mdecBackStalls = 15.0m;
+        const decimal mdecDiscount = 5.0m;
 
         private int Section
         {
@@ -42,35 +43,38 @@ namespace Ticketing
             set { amountDue = value; }
         }
 
-    // Constructor for TcicketPrice
-    public TicketPrice(int section, int quantity, bool discount)
-    {
-        Section = section;
-        Quantity = quantity;
-        Discount = discount;
-        AmountDue = amountDue;
-    }
+        // Constructor for TicketPrice
+        public TicketPrice(int section, int quantity, bool discount)
+        {
+            Section = section;
+            Quantity = quantity;
+            Discount = discount;
+            AmountDue = amountDue;
+        }
 
-     public void calculatePrice()
-     {
+        public void calculatePrice()
+        {
 
-         switch (section)
-         {
-             case 1:
-                 mPrice = mdecBalcony;
-                 break;
-             case 2:
-                 mPrice = mdecGeneral;
-                 break;
-             case 3:
-                 mPrice = mdecBox;
-                 break;
-         }
-         if (discount)
-         { mPrice -= mdecDiscount; }
+            switch (section)
+            {
+                 case 1:
+                     mPrice = mdecBalcony;
+                     break;
+                 case 2:
+                     mPrice = mdecGeneral;
+                     break;
+                 case 3:
+                     mPrice = mdecBox;
+                     break;
+                 case 4:
+                     mPrice = mdecBackStalls;
+                     break;
+            }
+            if (discount)
+            { mPrice -= mdecDiscount; }
 
-         AmountDue = mPrice * quantity;
+            AmountDue = mPrice * quantity;
 
-     }
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.radBalcony = new System.Windows.Forms.RadioButton();
             this.radGeneral = new System.Windows.Forms.RadioButton();
             this.radBox = new System.Windows.Forms.RadioButton();
+            this.radBackStalls = new System.Windows.Forms.RadioButton();
             this.grpSection = new System.Windows.Forms.GroupBox();
             this.cmdCalculate = new System.Windows.Forms.Button();
             this.grpSection.SuspendLayout();
@@ -115,16 +116,27 @@
             this.radBox.TabIndex = 8;
             this.radBox.Text = "Box Seats";
             this.radBox.UseVisualStyleBackColor = true;
+            //
+            // radBackStalls
+            //
+            this.radBackStalls.AutoSize = true;
+            this.radBackStalls.Location = new System.Drawing.Point(26, 86);
+            this.radBackStalls.Name = "radBackStalls";
+            this.radBackStalls.Size = new System.Drawing.Size(78, 17);
+            this.radBackStalls.TabIndex = 9;
+            this.radBackStalls.Text = "Back Stalls";
+            this.radBackStalls.UseVisualStyleBackColor = true;
             // 
             // grpSection
             // 
             this.grpSection.Controls.Add(this.radBox);
             this.grpSection.Controls.Add(this.radGeneral);
             this.grpSection.Controls.Add(this.radBalcony);
+            this.grpSection.Controls.Add(this.radBackStalls);
             this.grpSection.Location = new System.Drawing.Point(52, 141);
             this.grpSection.Name = "grpSection";
             this.grpSection.Size = new System.Drawing.Size(139, 111);
-            this.grpSection.TabIndex = 9;
+            this.grpSection.TabIndex = 10;
             this.grpSection.TabStop = false;
             this.grpSection.Text = "Section";
             // 
@@ -133,7 +145,7 @@
             this.cmdCalculate.Location = new System.Drawing.Point(294, 268);
             this.cmdCalculate.Name = "cmdCalculate";
             this.cmdCalculate.Size = new System.Drawing.Size(108, 35);
-            this.cmdCalculate.TabIndex = 10;
+            this.cmdCalculate.TabIndex = 11;
             this.cmdCalculate.Text = "Calculate";
             this.cmdCalculate.UseVisualStyleBackColor = true;
             this.cmdCalculate.Click += new System.EventHandler(this.cmdCalculate_Click);
@@ -170,6 +182,7 @@
         private System.Windows.Forms.RadioButton radBalcony;
         private System.Windows.Forms.RadioButton radGeneral;
         private System.Windows.Forms.RadioButton radBox;
+        private System.Windows.Forms.RadioButton radBackStalls;
         private System.Windows.Forms.GroupBox grpSection;
         private System.Windows.Forms.Button cmdCalculate;
     }
