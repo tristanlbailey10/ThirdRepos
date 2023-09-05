@@ -32,7 +32,8 @@
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.lblAmountDue = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.chkDiscount = new System.Windows.Forms.CheckBox();
+            this.chkSDiscount = new System.Windows.Forms.CheckBox();
+            this.chkChildDiscount = new System.Windows.Forms.CheckBox();
             this.radBalcony = new System.Windows.Forms.RadioButton();
             this.radGeneral = new System.Windows.Forms.RadioButton();
             this.radBox = new System.Windows.Forms.RadioButton();
@@ -75,15 +76,27 @@
             this.lblAmount.Size = new System.Drawing.Size(0, 13);
             this.lblAmount.TabIndex = 3;
             // 
-            // chkDiscount
+            // chkSDiscount
             // 
-            this.chkDiscount.AutoSize = true;
-            this.chkDiscount.Location = new System.Drawing.Point(111, 95);
-            this.chkDiscount.Name = "chkDiscount";
-            this.chkDiscount.Size = new System.Drawing.Size(104, 17);
-            this.chkDiscount.TabIndex = 5;
-            this.chkDiscount.Text = "Senior / Student";
-            this.chkDiscount.UseVisualStyleBackColor = true;
+            this.chkSDiscount.AutoSize = true;
+            this.chkSDiscount.Location = new System.Drawing.Point(111, 95);
+            this.chkSDiscount.Name = "chkSDiscount";
+            this.chkSDiscount.Size = new System.Drawing.Size(104, 17);
+            this.chkSDiscount.TabIndex = 5;
+            this.chkSDiscount.Text = "Senior / Student";
+            this.chkSDiscount.UseVisualStyleBackColor = true;
+            this.chkSDiscount.Click += new System.EventHandler(this.chkSDiscount_Click);
+            //
+            // chkChildDiscount
+            //
+            this.chkChildDiscount.AutoSize = true;
+            this.chkChildDiscount.Location = new System.Drawing.Point(247, 95);
+            this.chkChildDiscount.Name = "chkChildDiscount";
+            this.chkChildDiscount.Size = new System.Drawing.Size(60, 17);
+            this.chkChildDiscount.TabIndex = 6;
+            this.chkChildDiscount.Text = "Child";
+            this.chkChildDiscount.UseVisualStyleBackColor= true;
+            this.chkChildDiscount.Click += new System.EventHandler(this.chkChildDiscount_Click);
             // 
             // radBalcony
             // 
@@ -91,7 +104,7 @@
             this.radBalcony.Location = new System.Drawing.Point(26, 17);
             this.radBalcony.Name = "radBalcony";
             this.radBalcony.Size = new System.Drawing.Size(63, 17);
-            this.radBalcony.TabIndex = 6;
+            this.radBalcony.TabIndex = 7;
             this.radBalcony.Text = "Balcony";
             this.radBalcony.UseVisualStyleBackColor = true;
             // 
@@ -102,7 +115,7 @@
             this.radGeneral.Location = new System.Drawing.Point(26, 40);
             this.radGeneral.Name = "radGeneral";
             this.radGeneral.Size = new System.Drawing.Size(62, 17);
-            this.radGeneral.TabIndex = 7;
+            this.radGeneral.TabIndex = 8;
             this.radGeneral.TabStop = true;
             this.radGeneral.Text = "General";
             this.radGeneral.UseVisualStyleBackColor = true;
@@ -113,7 +126,7 @@
             this.radBox.Location = new System.Drawing.Point(26, 63);
             this.radBox.Name = "radBox";
             this.radBox.Size = new System.Drawing.Size(73, 17);
-            this.radBox.TabIndex = 8;
+            this.radBox.TabIndex = 9;
             this.radBox.Text = "Box Seats";
             this.radBox.UseVisualStyleBackColor = true;
             //
@@ -157,7 +170,8 @@
             this.ClientSize = new System.Drawing.Size(608, 445);
             this.Controls.Add(this.cmdCalculate);
             this.Controls.Add(this.grpSection);
-            this.Controls.Add(this.chkDiscount);
+            this.Controls.Add(this.chkChildDiscount);
+            this.Controls.Add(this.chkSDiscount);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lblAmountDue);
             this.Controls.Add(this.txtQuantity);
@@ -178,7 +192,8 @@
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblAmountDue;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.CheckBox chkDiscount;
+        private System.Windows.Forms.CheckBox chkSDiscount;
+        private System.Windows.Forms.CheckBox chkChildDiscount;
         private System.Windows.Forms.RadioButton radBalcony;
         private System.Windows.Forms.RadioButton radGeneral;
         private System.Windows.Forms.RadioButton radBox;
